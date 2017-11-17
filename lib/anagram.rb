@@ -6,13 +6,7 @@ def initialize(word)
 end
 
 def match(array)
-  match = []
-  array.each do |word|
-    if word.chars.sort.join == @word.chars.sort.join
-      match << word
-    end
-  end
-  match
+  array.select {|word| word.chars.sort.join == @word.chars.sort.join}
 end
 
 end
